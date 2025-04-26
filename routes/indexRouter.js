@@ -29,6 +29,8 @@ indexRouter.post("/new",(req,res)=>{
     msgObject.user=req.body.name;
     msgObject.added=new Date();
     messages.push(msgObject);
+
+    res.redirect("/");
     
 })
 
