@@ -3,6 +3,14 @@
         <title><%= title %></title>
     </head>
     <body>
+        <h1><%= title %></h1>
+        <% for(let i=0; i< messages.length ; i++){ %>
+            <div>
+                <h2>From: <%= messages[i].user %></h2>
+                <p><%= messages[i].text %></p>
+                <p>Received: <%= messages[i].added %></p>
+            </div>
+        <% } %>    
 
     </body>
 </html>
