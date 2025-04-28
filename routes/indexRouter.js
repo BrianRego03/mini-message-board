@@ -4,11 +4,13 @@ const indexRouter = Router();
 const messages=[
     {
         text:"Hello there!",
+        title:"Emergency Transmission",
         user:"Obi-Wan Kenobi",
         added: new Date()
     },
     {
         text:"General Kenobi!",
+        title:"Important!",
         user:"General Grievous",
         added:new Date()
     }
