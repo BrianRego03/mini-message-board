@@ -1,12 +1,9 @@
 const {Router}= require("express");
 const indexRouter = Router();
 
+const {fetchAllMessages}=require("../controllers/indexController");
 
-
-indexRouter.get("/", (req, res) => {
-    res.render("index",{title:"Mini Messageboard",messages:messages});
-}
-)
+indexRouter.get("/", fetchAllMessages);
 
 indexRouter.get("/new",(req,res)=>{
     res.render("form");
