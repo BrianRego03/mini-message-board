@@ -23,6 +23,7 @@ async function serveParticularMessage(index){
 
 async function postMessage(msgObject){
     messages.push(msgObject);
+    return true;
 }
 
 module.exports={serveMessages,serveParticularMessage,postMessage};

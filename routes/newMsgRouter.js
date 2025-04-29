@@ -6,8 +6,6 @@ newMsgRouter.get("/",(req,res)=>{
     res.render("form");
 })
 
-newMsgRouter.post("/",(req,res)=>{
-    sendMessageToDatabase();
-})
+newMsgRouter.post("/",sendMessageToDatabase)
 
 module.exports=newMsgRouter;
