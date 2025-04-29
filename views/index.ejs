@@ -6,11 +6,13 @@
         <h1><%= title %></h1>
         <% for(let i=0; i< messages.length ; i++){ %>
             <div>
-                <a href="/messages/<%= i %>">
-                    <h2>
+                <h2>
+                    <a href="/messages/<%= i %>">
+                
                         <%= messages[i].title %>
-                    </h2>
-                </a>
+                
+                    </a>
+                </h2>
                 <p>From: <%= messages[i].user %>
                 </p>
                 <p>Received: <%= messages[i].added %>
