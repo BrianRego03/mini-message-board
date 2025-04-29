@@ -11,3 +11,5 @@ const sendMessageToDatabase=async(req,res)=>{
         res.redirect("/");
     }
 }
+
+module.exports={sendMessageToDatabase};
