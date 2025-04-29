@@ -21,4 +21,8 @@ async function serveParticularMessage(index){
     return messages[index];
 }
 
-module.exports={serveMessages,serveParticularMessage};
+async function postMessage(msgObject){
+    messages.push(msgObject);
+}
+
+module.exports={serveMessages,serveParticularMessage,postMessage};
