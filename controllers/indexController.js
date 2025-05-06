@@ -9,4 +9,4 @@ const deleteEverything= async(req,res)=>{
     await db.deleteAll();
     res.redirect("/");
 }
-module.exports={fetchAllMessages};
+module.exports={fetchAllMessages,deleteEverything};

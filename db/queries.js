@@ -15,7 +15,7 @@ async function serveParticularMessage(index){
 
 async function postMessage(msgObject){
     // messages.push(msgObject);
-    const {text,title,userName,added}=msgObject;
+    const {text,title,username,added}=msgObject;
     await pool.query(`INSERT INTO messages (username,added,title,text)
         VALUES($1,$2,$3,$4)`,[username,added,title,text]);
     return true;
@@ -28,5 +28,6 @@ async function deleteAll(){
 module.exports={
     serveMessages,
     serveParticularMessage,
-    postMessage
+    postMessage,
+    deleteAll
 }

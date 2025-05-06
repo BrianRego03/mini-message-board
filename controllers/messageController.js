@@ -3,7 +3,7 @@ const db=require("../db/queries");
 const fetchMessageByIndex = async(req,res)=>{
     const {messageIndex}=req.params;
     const message=await db.serveParticularMessage(messageIndex);
-    // console.log(message);
+    console.log(message);
 
     res.render("viewMessage",{message:message});
 }
