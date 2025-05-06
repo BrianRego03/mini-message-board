@@ -21,6 +21,10 @@ async function postMessage(msgObject){
     return true;
 }
 
+async function deleteAll(){
+    await pool.query(`DELETE FROM messages`);
+}
+
 module.exports={
     serveMessages,
     serveParticularMessage,

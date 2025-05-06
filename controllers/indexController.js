@@ -5,5 +5,8 @@ const fetchAllMessages= async(req,res)=>{
     console.log(messages);
     res.render("index",{title:"Mini Messageboard",messages:messages})
 }
-
+const deleteEverything= async(req,res)=>{
+    await db.deleteAll();
+    res.redirect("/");
+}
 module.exports={fetchAllMessages};
